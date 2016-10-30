@@ -67,7 +67,7 @@ May the force be with you.
 
 - Sifo-Dyas
 
-
+```
                                  +---------------------+
                                  | Whats going on here?|
                                  +------------------+--+
@@ -94,14 +94,14 @@ May the force be with you.
           LS |  #  |#  |      - Front View -
 
 
-
+```
 #Setting Up and Usage:
 
 1. Create a API on dropbox and set the authorization token in the config.py file.
 
 2. Set the local directory on your pc that you want to sync with folders of other devices.
 
-3. We will set up a cron job for the file file_download.py on our system. A cron job can be set up on Ubuntu by the following commands.
+3. We will set up a cron job for the file fileDownload.py on our system. A cron job can be set up on Ubuntu by the following commands.
   **crontab -e**  
   
   Append the below line to the file with the appropriate path to the file.   
