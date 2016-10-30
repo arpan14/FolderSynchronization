@@ -114,7 +114,10 @@ May the force be with you.
 4. Run the file fileUpload.py in the background as a daemon. This script watches the folder that we specified in the config.py file as 
   LOCAL_DIRECTORY_WATCH and fires an event whenever the specified folder undergoes any modification. The modified file is pushed to dropbox.
 
+#Installation and Dependencies
 
+**sudo pip install dropbox**
+**sudo pip install dropbox**
 
 
 #Additional Considerations
