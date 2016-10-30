@@ -116,7 +116,7 @@ May the force be with you.
 
 #Installation and Dependencies
 
-**sudo pip install dropbox**
+**sudo pip install dropbox**  \n\n
 **sudo pip install dropbox**
 
 
