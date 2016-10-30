@@ -7,7 +7,7 @@ try:
 	import sys
 	import dropbox
 	from dropbox.client import DropboxClient
-	from config import ACCESS_TOKEN,LOCAL_DIRECTORY,DROPBOX_SYNC_LOCATION
+	from config import ACCESS_TOKEN,DROPBOX_SYNC_LOCATION
 	import time
 	import unicodedata
 except Exception as e:
@@ -35,7 +35,8 @@ for object in results:
 		
 		#set the local file path where we want the files to be synced and stored.
 		file_path=file_path.replace(DROPBOX_SYNC_LOCATION,"/home")
-		
+		homedir = os.environ['HOME']+DROPBOX_SYNC_LOCATION
+		file_path=homedir+file_path
 		#if file doesn't exist then create the respective directories before writing it to disk.
 		if not os.path.exists(os.path.dirname(file_path)):
 			try:
@@ -43,6 +44,6 @@ for object in results:
 			except OSError as exc: # Guard against race condition
 				if exc.errno != errno.EEXIST:
 					raise
-		with open(file_path, "w") as f:
+		with open(file_path, "w+") as f:
 			f.write(data)
 

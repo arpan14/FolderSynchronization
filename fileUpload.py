@@ -24,7 +24,7 @@ class MyHandler(FileSystemEventHandler):
 	#specify the directory name to be watched in the config.py file
 	
 	def on_modified(self,event):
-		for root, dirs, files in os.walk(LOCAL_DIRECTORY):
+		for root, dirs, files in os.walk(LOCAL_DIRECTORY_WATCH):
 			for filename in files:
 				local_path = os.path.join(root, filename)
 				DROP_BOX_PATH=local_path.replace("/home","")			
